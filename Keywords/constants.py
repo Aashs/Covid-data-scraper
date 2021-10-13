@@ -1,3 +1,3 @@
-from Covid import country_search
+from Covid.country_search import *
 
 country_search('India')
