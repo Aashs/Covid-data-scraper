@@ -1,12 +1,19 @@
-import request as r
+import requests as r
 
 
-class CountryNotFound(s):
+class CountryNotFound(Exception):
 	pass
 
 class CovidClient:
 	def __init__(self):
 		self.country=""
+		self.total_cases=""
+		self.total_death=""
+		self.total_recover=""
+		self.total_tests=""
+		self.active=""
+		self.critical=""
+		
 		
 	def _data(self):
 		"""Internal Function to load data"""
@@ -19,20 +26,15 @@ class CovidClient:
 		
 	def load_country(self,country:str):
 		self.country=country
+		d = self._data()
 		if self._data() is False:
 			raise CountryNotFound("No such Country Found!!")
 			return False
 		else:
+			self.total_cases=d['cases']
+			self.total_death=d['deaths']
+			self.total_recover=d['recovered']
+			self.total_tests=d['tests']
+			self.active = d['active']
+			self.critical = d['critical']
 			return True
-	
-	
-	def cases(self):
-		data = self._data()
-		active = data['active']
-		critical = data['critical']
-		total = data['cases']
-		return {'total':total,'active':active,'critical':critical}
-		
-		
-		
-		
