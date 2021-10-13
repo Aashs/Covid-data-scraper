@@ -39,4 +39,4 @@ def country_search(country: str):
         )
 
 
-country_search(country)
+country_search('Poland')
