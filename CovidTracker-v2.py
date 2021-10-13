@@ -1,4 +1,4 @@
-import reqeusts as r
+import request as r
 
 
 class CountryNotFound(s):
