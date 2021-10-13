@@ -24,7 +24,6 @@ if req.status_code == 200:
     deaths = deaths.span.string
     recover = recover.span.string
 
-
     print(f"cases: {cases}\ndeaths: {deaths}\nrecover: {recover}")
 
 else:
