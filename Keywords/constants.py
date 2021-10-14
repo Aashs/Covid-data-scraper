@@ -1,3 +1,4 @@
 from Covid.country_search import *
 
-country_search('India')
+
+country_search('Poland')
