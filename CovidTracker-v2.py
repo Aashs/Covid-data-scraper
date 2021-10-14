@@ -15,6 +15,13 @@ class CovidClient:
 		self.critical=""
 		self.today_cases=""
 		self.today_deaths=""
+		self.today_recover=""
+		self.percent_cases=""
+		self.percent_death=""
+		self.percent_test==""
+		self.population==""
+		self.flag_url==""
+		self.country_id==""
 		
 		
 	def _data(self):
