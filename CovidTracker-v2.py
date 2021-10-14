@@ -13,6 +13,8 @@ class CovidClient:
 		self.total_tests=""
 		self.active=""
 		self.critical=""
+		self.today_cases=""
+		self.today_deaths=""
 		
 		
 	def _data(self):
@@ -37,4 +39,13 @@ class CovidClient:
 			self.total_tests=d['tests']
 			self.active = d['active']
 			self.critical = d['critical']
+			self.today_deaths = d['todayDeaths']
+			self.today_cases = d['todayCases']
+			self.today_recover=d['todayRecovered']
+			self.percent_cases=int(d['oneCasePerPeople'])/int(d['population'])*100
+			self.percent_death=int(d['oneDeathPerPeople'])/int(d['population'])*100
+			self.percent_test=int(d['oneTestPerPeople'])/int(d['population'])*100
+			self.population=d['population']
+			self.flag_url=d['countryInfo']['flag']
+			self.country_id=d['countryInfo']['_id']
 			return True
