@@ -30,9 +30,6 @@ def country_search(country: str):
 
             print(f"cases: {cases}\ndeaths: {deaths}\nrecover: {recover}")
 
-        else:
-            print('error', req.status_code)
-
     except KeyError:
         raise ValueError(
             f"There is no country called '{country}'"
