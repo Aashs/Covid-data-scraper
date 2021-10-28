@@ -1,1 +1,1 @@
-Covid tracker getting covid information from worldmeters by scrapping the website.<a href="https://guides.github.com/activities/contributing-to-open-source/">this guide</a>
+Covid tracker getting covid information from <a href="https://www.worldometers.info/coronavirus/#countries">worldometers</a>s by scrapping the website.
