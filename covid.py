@@ -5,8 +5,6 @@ from bs4 import BeautifulSoup
 
 """Total Cases"""
 
-print('test')
-
 
 def total_cases():
     s = time.time()
@@ -31,6 +29,8 @@ def total_cases():
         recover = recover.span.string
         print(f"cases: {cases}\ndeaths: {deaths} \nrecover: {recover}")
 
+
+total_cases()
 
 """Cases by searching country"""
 
@@ -63,4 +63,4 @@ def country_search(country: str):
         raise ValueError(f"There is no country called {country}")
 
 
-country_search('russia')
+country_search(country)
