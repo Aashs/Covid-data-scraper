@@ -63,4 +63,4 @@ def country_search(country: str):
         raise ValueError(f"There is no country called {country}")
 
 
-country_search(country)
+country_search('russia')
