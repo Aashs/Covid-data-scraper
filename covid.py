@@ -27,6 +27,10 @@ def total_cases():
         cases = cases.span.string
         deaths = deaths.span.string
         recover = recover.span.string
+        f = open("covid.txt", "a")
+        f.write(
+            f"\nTotal\ncases: {cases}\ndeaths: {deaths}\nrecover: {recover}")
+        f.close()
         print(f"cases: {cases}\ndeaths: {deaths} \nrecover: {recover}")
 
 
@@ -57,10 +61,14 @@ def country_search(country: str):
             cases = cases.span.string
             deaths = deaths.span.string
             recover = recover.span.string
-            print(f"cases: {cases}\ndeaths: {deaths}\nrecover: {recover}")
+            # change "a" to "w" and get rid of the \n to overite the content
+            f = open("covid.txt", "a")
+            f.write(
+                f"\n{country}\ncases: {cases}\ndeaths: {deaths}\nrecover: {recover}")
+            f.close()
 
     except KeyError:
         raise ValueError(f"There is no country called {country}")
 
 
-country_search('russia')
+country_search(country)
