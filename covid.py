@@ -1,7 +1,11 @@
-import lxml
+from bs4 import BeautifulSoup
 import time
 import requests
-from bs4 import BeautifulSoup
+import json
+
+"""Getting data on what to scrape"""
+with open('config.json') as f:
+    data = json.load(f)
 
 
 def main(link):
@@ -28,13 +32,15 @@ def main(link):
 
 
 def total_cases():
-    link = f"https://www.worldometers.info/coronavirus/"
-    cases, deaths, recover = main(link)
-    f = open("covid.txt", "a")
-    f.write(
-        f"\nTotal\ncases: {cases}\ndeaths: {deaths}\nrecover: {recover}")
-    f.close()
-    print(f"cases: {cases}\ndeaths: {deaths} \nrecover: {recover}")
+    while True:
+        link = f"https://www.worldometers.info/coronavirus/"
+        cases, deaths, recover = main(link)
+        temp_cases = {
+            "cases": f"cases: {cases},  deaths: {deaths},  recover: {recover}"}
+        with open("cases_storage.json", "w") as f:
+            json.dump(temp_cases, f, indent=4)
+            print('Working')
+            time.sleep(3600)
 
 
 total_cases()
@@ -51,4 +57,4 @@ def country_search(country):
         raise ValueError(f"There is no country called {country}")
 
 
-country_search('russia')
+country_search((data["country"]))
