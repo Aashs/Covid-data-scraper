@@ -49,6 +49,20 @@ def all_countrys():
 '''Loads cases in json'''
 
 
+def test():
+    with open("cases_storage.json") as f:
+        data = json.load(f)
+        for elements in data["countries"].values():
+            del elements['increase-today']
+            print(elements)
+
+    with open('cases_storage.json', "w") as f:
+        json.dump(data, f, indent=3)
+
+
+test()
+
+
 def all_countrys_cases():
     while True:
         with open("cases_storage.json") as f:
@@ -61,8 +75,6 @@ def all_countrys_cases():
             cases_2 = cases
             deaths_2 = deaths
             recover_2 = recover
-            if start_increase == True:
-                data["TOTAL"]["increase-today"]["cases"] = cases_2-cases
 
         with open('cases_storage.json', "w") as f:
             json.dump(data, f, indent=3)
@@ -89,8 +101,8 @@ def all_countrys_cases():
 
             except AttributeError:
                 print(f"No span found for {countries_req}")
-        time.sleep(10)
-        start_increase = True
+
+        time.sleep(3600)
 
 
-all_countrys_cases()
+# all_countrys_cases()
