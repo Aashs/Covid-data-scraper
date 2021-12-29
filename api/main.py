@@ -9,10 +9,12 @@ app = FastAPI()
 
 @app.get("/countries/{countryName}")
 def main(countryName: str):
-    with open(cases_storage) as f:
-        data = json.load(f)
-        return {"cases": data["countries"][countryName]["cases"], "deaths": data["countries"][countryName]["deaths"], "recovers": data["countries"][countryName]["recovers"]}
-
+    try:    
+        with open(cases_storage) as f:
+            data = json.load(f)
+            return {"cases": data["countries"][countryName]["cases"], "deaths": data["countries"][countryName]["deaths"], "recovers": data["countries"][countryName]["recovers"]}
+    except KeyError:
+        return {"GET KEYWORDS DONE ASAP"}
 
 @app.get("/total")
 def main(request: Request):

@@ -8,6 +8,8 @@ bs4 = "*"
 requests = "*"
 fastapi = "*"
 uvicorn = "*"
+lxml = "*"
+gunicorn = "*"
 
 [dev-packages]
 

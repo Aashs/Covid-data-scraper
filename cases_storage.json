@@ -1,89 +1,89 @@
 {
    "TOTAL": {
-      "cases": "10 ",
-      "deaths": "5,331,856",
-      "recovers": "243,902,323"
+      "cases": "277,698,982 ",
+      "deaths": "5,396,858",
+      "recovers": "248,918,302"
    },
    "countries": {
       "us": {
-         "cases": "1000 ",
-         "deaths": "819,315",
-         "recovers": "40,154,700"
+         "cases": "52,510,978 ",
+         "deaths": "833,029",
+         "recovers": "40,908,146"
       },
       "India": {
-         "cases": "34,703,644 ",
-         "deaths": "475,888",
-         "recovers": "34,138,763"
+         "cases": "34,765,976 ",
+         "deaths": "478,759",
+         "recovers": "34,208,926"
       },
       "Brazil": {
-         "cases": "22,191,949 ",
-         "deaths": "616,980",
+         "cases": "22,222,928 ",
+         "deaths": "618,128",
          "recovers": "21,414,318"
       },
       "UK": {
-         "cases": "10,873,468 ",
-         "deaths": "146,477",
-         "recovers": "9,528,314"
+         "cases": "11,647,473 ",
+         "deaths": "147,573",
+         "recovers": "9,922,480"
       },
       "Russia": {
-         "cases": "10,074,797 ",
-         "deaths": "291,749",
-         "recovers": "8,804,000"
+         "cases": "10,318,650 ",
+         "deaths": "301,271",
+         "recovers": "9,139,166"
       },
       "Turkey": {
-         "cases": "9,058,975 ",
-         "deaths": "79,322",
-         "recovers": "8,637,984"
+         "cases": "9,228,835 ",
+         "deaths": "80,957",
+         "recovers": "8,858,445"
       },
       "France": {
-         "cases": "8,270,728 ",
-         "deaths": "120,431",
+         "cases": "8,798,028 ",
+         "deaths": "122,116",
          "recovers": "5,162,757"
       },
       "Iran": {
-         "cases": "6,160,303 ",
-         "deaths": "130,831",
-         "recovers": "5,980,566"
+         "cases": "6,179,817 ",
+         "deaths": "131,262",
+         "recovers": "6,019,343"
       },
       "Germany": {
-         "cases": "6,559,716 ",
-         "deaths": "106,591",
-         "recovers": "5,497,300"
+         "cases": "6,918,033 ",
+         "deaths": "110,244",
+         "recovers": "5,992,800"
       },
       "Argentina": {
-         "cases": "5,361,967 ",
-         "deaths": "116,792",
-         "recovers": "5,218,343"
+         "cases": "5,415,501 ",
+         "deaths": "116,964",
+         "recovers": "5,243,498"
       },
       "Spain": {
-         "cases": "5,339,992 ",
-         "deaths": "88,484",
-         "recovers": "4,954,319"
+         "cases": "5,645,095 ",
+         "deaths": "88,937",
+         "recovers": "4,997,068"
       },
       "Colombia": {
-         "cases": "5,095,821 ",
-         "deaths": "129,163",
-         "recovers": "4,935,876"
+         "cases": "5,112,719 ",
+         "deaths": "129,586",
+         "recovers": "4,952,013"
       },
       "Italy": {
-         "cases": "5,238,221 ",
-         "deaths": "134,929",
-         "recovers": "4,812,535"
+         "cases": "5,472,469 ",
+         "deaths": "136,077",
+         "recovers": "4,933,663"
       },
       "Indonesia": {
-         "cases": "4,259,439 ",
-         "deaths": "143,960",
-         "recovers": "4,110,574"
+         "cases": "4,261,208 ",
+         "deaths": "144,042",
+         "recovers": "4,112,524"
       },
       "Mexico": {
-         "cases": "3,918,987 ",
-         "deaths": "296,721",
-         "recovers": "3,275,463"
+         "cases": "3,940,401 ",
+         "deaths": "298,359",
+         "recovers": "3,293,911"
       },
       "Poland": {
-         "cases": "3,857,085 ",
-         "deaths": "89,045",
-         "recovers": "3,333,313"
+         "cases": "4,017,420 ",
+         "deaths": "93,445",
+         "recovers": "3,500,570"
       },
       "Ukraine": {
          "cases": "3,570,448 ",
