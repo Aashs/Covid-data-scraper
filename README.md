@@ -1,6 +1,6 @@
 # About
 
-**Covid data-scraper** is a **[web-api](https://covid19data.tk/)** for covid data. Gets the data from **[worldometers](https://www.worldometers.info/coronavirus/#countries)** does not require any api keys to use it.
+**Covid data-scraper** is a **[web-api](https://covid19data.tk/)** for covid data. Gets the data from **[worldometers](https://www.worldometers.info/coronavirus/#countries)** does not require any api keys to use it, The data gets updated every 40 minutes.
 
 # How to use?
 
