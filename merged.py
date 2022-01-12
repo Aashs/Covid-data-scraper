@@ -1,8 +1,9 @@
-from bs4 import BeautifulSoup
-import json
-import time
-import Request
+import json, time, requests, uvicorn
+from fastapi import FastAPI, Request
 from threading import *
+from bs4 import BeautifulSoup
+
+"""We use this script on our hosting service replit 😂"""
 
 """Getting data on what to scrape"""
 class covid19data(Thread):
@@ -93,6 +94,51 @@ class covid19data(Thread):
                 json.dump(data, f, indent=3)
 
             print('Sleeping started')
-            time.sleep(3600)
+            time.sleep(3600)    
 
-covid19data().start()            
+"""-------------------------------API Server-----------------------------------------"""
+app = FastAPI()
+
+@app.get("/")
+def dashboard():
+  with open("cases_storage.json") as f:
+    data = json.load(f)
+    newTime = time.time()
+    lastUpdate = round((newTime - float(data['lastScrapped']['lastUpdateTime']))/60)
+    return {
+      f'data last updated {lastUpdate} minute ago, a nice dashboard will be here soon....'
+    }
+
+
+@app.get("/countries/{countryName}")
+def get_country(countryName: str):
+    try:
+        with open("cases_storage.json") as f:
+            data = json.load(f)
+            return {
+                "cases": data["countries"][countryName]["cases"],
+                "deaths": data["countries"][countryName]["deaths"],
+                "recovers": data["countries"][countryName]["recovers"]
+            }
+    except KeyError:
+        return {"Key error"}
+
+
+@app.get("/total")
+def all_country_total(request: Request):
+    with open("cases_storage.json") as f:
+        data = json.load(f)
+        return {
+            "cases": data["TOTAL"]["cases"],
+            "deaths": data["TOTAL"]["deaths"],
+            "recovers": data["TOTAL"]["recovers"]
+        }
+
+        
+def run():
+  print(f"Server Thread is running...")
+  uvicorn.run(app, host='0.0.0.0', port=8080)
+
+
+covid19data().start()
+Thread(target=run).start()
