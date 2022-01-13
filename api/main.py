@@ -1,6 +1,7 @@
 import json
 from fastapi import FastAPI, Request
 import uvicorn
+
 app = FastAPI()
 
 @app.get("/")
@@ -10,7 +11,7 @@ def dashboard():
     newTime = time.time()
     lastUpdate = round((newTime - float(data['lastScrapped']['lastUpdateTime']))/60)
     return {
-      f'data last updated {lastUpdate} minute ago, a nice dashboard will be here soon....'
+      f'data last updated {lastUpdate} minute ago, code can be found here https://github.com/Aashs/Covid-data-scraper and for documentation about requesting data https://covid19data.tk/docs.'
     }
 
 
@@ -25,7 +26,13 @@ def get_country(countryName: str):
                 "recovers": data["countries"][countryName]["recovers"]
             }
     except KeyError:
-        return {"Key error"}
+      try:
+        country_upper=countryName.title()
+        return{"cases": data["countries"][country_upper]["cases"],
+                "deaths": data["countries"][country_upper]["deaths"],
+                "recovers": data["countries"][country_upper]["recovers"]}
+      except KeyError:  
+        return 'Key Error'    
 
 
 @app.get("/total")
@@ -45,4 +52,3 @@ def run():
 
 
 covid19data().start()
-Thread(target=run).start()

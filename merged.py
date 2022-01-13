@@ -1,14 +1,13 @@
+"""We use this script for hosting it in replit"""
 import json, time, requests, uvicorn
 from fastapi import FastAPI, Request
 from threading import *
 from bs4 import BeautifulSoup
 
-"""We use this script on our hosting service replit 😂"""
 
 """Getting data on what to scrape"""
 class covid19data(Thread):
 
-  
     def get_cases(self, link):
         s = time.time()
         req = requests.get(link)
@@ -94,7 +93,7 @@ class covid19data(Thread):
                 json.dump(data, f, indent=3)
 
             print('Sleeping started')
-            time.sleep(3600)    
+            time.sleep(2400)    
 
 """-------------------------------API Server-----------------------------------------"""
 app = FastAPI()
@@ -106,7 +105,7 @@ def dashboard():
     newTime = time.time()
     lastUpdate = round((newTime - float(data['lastScrapped']['lastUpdateTime']))/60)
     return {
-      f'data last updated {lastUpdate} minute ago, a nice dashboard will be here soon....'
+      f'data last updated {lastUpdate} minute ago, code can be found here https://github.com/Aashs/Covid-data-scraper and for documentation about requesting data https://covid19data.tk/docs.'
     }
 
 
@@ -121,7 +120,10 @@ def get_country(countryName: str):
                 "recovers": data["countries"][countryName]["recovers"]
             }
     except KeyError:
-        return {"Key error"}
+        country_upper=countryName.title()
+        return{"cases": data["countries"][country_upper]["cases"],
+                "deaths": data["countries"][country_upper]["deaths"],
+                "recovers": data["countries"][country_upper]["recovers"]}
 
 
 @app.get("/total")
