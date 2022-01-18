@@ -12,3 +12,4 @@ Refer to https://covid19data.tk/docs about Parameters/args.
 # Countribution
 
 This project is open-source if you want to countribute please open a pr.Thank you!
+And you can help us by forking this repo :)
