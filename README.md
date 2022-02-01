@@ -1,6 +1,6 @@
 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-Nope-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
-![Maintaner](https://img.shields.io/badge/Maintainer-Hunter-blue)
+![Maintaner](https://img.shields.io/badge/Maintainer-Aashs-blue)
 [![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)](https://github.com/Naereen/badges/)
 
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
