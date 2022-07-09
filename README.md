@@ -7,7 +7,7 @@
 You can directly request from our **[web-api](https://covid19data.tk/)**.
 Refer to https://covid19data.tk/docs about Parameters.
 
-**Running the source** if you want to run the source merge both api/main.py and covid.py **[here](https://replit.com/@Aashes/CovidTracker#main.py)**. Since we are using threads to run our code simentensoly
+**Running the source** if you want to run merged.py **[here](https://replit.com/@Aashes/CovidTracker#main.py)**.
 
 # Countribution
 
