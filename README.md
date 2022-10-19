@@ -13,3 +13,6 @@ Refer to https://covid19data.tk/docs about Parameters.
 
 This project is open-source if you want to countribute please open a pr.Thank you!
 And you can help us by forking this repo :)
+
+
+Web-api has been discontinued mainily hosting it costs and no one really uses this api, feel free to run the src
